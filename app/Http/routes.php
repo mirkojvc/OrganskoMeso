@@ -11,6 +11,10 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get(
+	'/',
+	[
+		'as'	=>	"index",
+		'uses'	=>	"HomeController@index",
+	]
+);
