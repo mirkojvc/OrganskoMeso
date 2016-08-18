@@ -18,3 +18,10 @@ $app->get(
 		'uses'	=>	"HomeController@index",
 	]
 );
+$app->get(
+	'contact',
+	[
+		'as'	=>	"contact",
+		'uses'	=>	"HomeController@contact",
+	]
+);

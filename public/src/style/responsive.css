@@ -1,27 +1,95 @@
 
-
-@media screen and (max-width : 1065px){
-  ul.topnav li.icon {display: none;}
-  ul.topnav li {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
-  #slide-down{
-    display: none;
-  }
+body {
+    width: 100%;
+    height: 100%;
 }
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+nav li a{
+    color: #900000!important;
+    font-size: 25px!important;
+    cursor: pointer;
+    font-weight: bold;
+}
+.heading{
+    color: #900000!important;
+    font-size: 45px!important;
+    font-weight: bold;!important;
+    cursor: pointer;
+}
+nav li a:hover{
+   font-weight: bolder!important;
+   text-shadow: 2px 2px #fff;
+   text-decoration: underline!important;
+}
+.fixer{
+    background:url(../img/4.jpg) no-repeat 50% 50% fixed;
+    display: table;
+    width: 100%;
+    background-size: cover;
+    min-height: 450px;
+    }
+.footer-header{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+.footer-header h1{
+    color: white;
+}
+.footer-header p{
+    color: white;
+}
+.navbar{
+   /* background: url(../img/Melamine-wood-001.png) repeat-x 100% 100%;*/
+   background-color: rgba(255,255,255,0.3)!important;
+    border:none!important;
+}
+.top-nav-collapse{background-color: rgba(255,255,255,0.9)!important;}
+.foot{background-color: #222222}
+.cert{text-align: center;}

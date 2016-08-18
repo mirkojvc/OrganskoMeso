@@ -1,115 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--Head section !-->
-  <head>
-    <!-- Meta tags !-->
-    <meta charset="utf-8">
-    <meta name="author" content="LLS">
-    <meta name="description" content="opis neki"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- End of Meta tags !-->
-    <!--  Links &connections !-->
-    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <title>Organic-index</title>
-    <link rel="stylesheet" type="text/css" href="../../src/style/general.css"/>
-      <link rel="stylesheet" type="text/css" href="../../src/style/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="../../src/style/responsive.css"/>
-      <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../../src/js/main.js"></script>
-    <script type="text/javascript" src="../../src/js/modernizr.custom.86080.js"></script>
+@include('includes.header')
+@extends('layouts.master')
+ 
 
-    <link rel="icon" href="src/img/favicon.ico"/>
-      <!--  End of Links &connections !-->
-        <!--  Social !-->
-          <!--Facebook !-->
-              <meta property="og:title" content="">
-              <meta property="og:description" content="">
-              <meta property="og:image" content="">
-              <meta property="og:url" content="">
-          <!--End of Facebook !-->
-          <!-- Twitter !-->
-            <meta name="twitter:title" content="">
-            <meta name="twitter:description" content="">
-            <meta name="twitter:image" content="">
-            <meta name="twitter:card" content="">
-            <!-- End of Twitter !-->
-          <!--  End of social !-->
-    <!-- End of Head section !-->
-  </head>
-  <body>
-
-    <div class="container-fluid">
-	<div id="top-logo-nav" class="row">
-		<div class="col-md-2">
-          <img src="src/img/logo.png" height="110px"width="330px;"/>
-		</div>
-		<div class="col-md-10">
-      <nav >
-        <ul class="topnav" id="myTopnav">
-          <li><a href="">Pocetna</a></li>
-          <li><a href="">Recepti</a></li>
-          <li><a href="">Narudzbine</a></li>
-          <li><a href="">Naše farme</a></li>
-          <li><a href="">Kontakt</a></li>
-          <li class="icon">
-            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-          </li>
-        </ul>
-      </nav>
-
-		</div>
-	</div>
+@section('content')
 	<div class="row">
 		<div class="col-md-12" id="slide">
       <ul class="slideshow">
             <li>
               <span>Image 01</span>
               <div>
-                <h3></h3>
-              </div>
+               
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                              </div>
             </li>
             <li>
               <span>Image 02</span>
               <div>
-                <h3></h3>
+                
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 
               </div>
             </li>
             <li>
               <span>Image 03</span>
               <div>
-                <h3></h3>
+                
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                  
               </div>
             </li>
             <li>
               <span>Image 04</span>
               <div>
-                <h3></h3>
+               
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 
               </div>
             </li>
             <li>
               <span>Image 05</span>
               <div>
-                <h3></h3>
+               
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+               
               </div>
             </li>
             <li>
               <span>Image 06</span>
               <div>
-                <h3></h3>
+               
+                <h1>Organsko meso</h1>
+                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 
               </div>
             </li>
             <li><!--...--></li>
-            <li>  </li>
+            <li></li>
       </ul>
 		</div>
 	</div>
-  <div  class="row">
+  <div  class="row btn-ord">
 		<div id="slide-down" class="col-md-12 bounce">
-        <a href="#start" > <img src="src/img/arrow1.png" alt="arrow"/></a>
+        <a href="#" class="button-order">Narucite odmah</a>
       	</div>
         	</div>
 	<div class="row">
-		<div class="col-md-9">
+  <div class="col-md-1"></div>
+		<div class="col-md-8">
       <!-- Articles with texts!-->
       <a name="start"></a>
               <section class="text-holder">
@@ -154,29 +116,11 @@
 
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-4 certificate">
-      <img src="src/img/sertifikat.png" alt="certificate"/>
-		</div>
-		<div class="col-md-4 certificate">
-      <img src="src/img/sertifikat.png" alt="certificate"/>
-		</div>
-		<div class="col-md-4 certificate">
-      <img src="src/img/sertifikat.png" alt="certificate"/>
-		</div>
+	<div class="row fixer">
+    <div class="footer-header">
+		  <h2>Zdravo i prirodno</h2>
+      <p>Neki pametan tekst lalalalala</p>
+      </div>
 	</div>
-	<div class="row">
-		<div id="bottom-nav" class="col-md-12">
-      <ul>
-        <li><a href="">Pocetna</a></li>
-        <li><a href="">Recepti</a></li>
-        <li><a href="">Narudzbine</a></li>
-        <li><a href="">Naše farme</a></li>
-        <li><a href="">Kontakt</a></li>
-      </ul>
-		</div>
-	</div>
-</div>
-
-  </body>
-</html>
+  
+	 @endsection
