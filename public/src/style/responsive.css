@@ -73,6 +73,13 @@ nav li a:hover{
     background-size: cover;
     min-height: 450px;
     }
+.order-fix{
+    background:url(../img/meso.jpg) no-repeat 50% 50% fixed;
+    display: table;
+    width: 105%;
+    background-size: cover;
+    min-height: 450px;
+}
 .footer-header{
     display: table-cell;
     vertical-align: middle;
@@ -93,3 +100,27 @@ nav li a:hover{
 .top-nav-collapse{background-color: rgba(255,255,255,0.9)!important;}
 .foot{background-color: #222222}
 .cert{text-align: center;}
+/*order page*/
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid blue;
+}
+label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
+   -ms-transform: scale(1.2, 1.2); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2);/* Safari */
+    transform: scale(1.2, 1.2);
+}
+.quant{
+    margin:50px auto 0px;
+}
+.quant h1{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}

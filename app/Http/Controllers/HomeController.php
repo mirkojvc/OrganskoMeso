@@ -11,4 +11,7 @@ class HomeController extends Controller
      public function contact() {
         return View('contact');
     }
+     public function order() {
+        return View('order');
+    }
 }

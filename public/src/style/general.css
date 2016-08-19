@@ -234,13 +234,24 @@ width: 100%;
   padding: 5px;
   color:#900000;
 }
-#btn{
-  border-radius: 10px;
-  color: white;
-  width: 40%;
-  margin: 10px auto;
-  margin-bottom: 20px;
-  background-color: #33cc33;
+.button-order2{
+   padding: 13px 24px 11px;
+  border:3px solid #fff;
+  border-radius: 3px;
+  font-size:20px;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 18px;
+  cursor: pointer;
+  display: inline-block;
+  color : #fff;
+  background: #65863A;
+  border-color: #65863A;
+  -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .text-holder{
   margin-top: 50px;

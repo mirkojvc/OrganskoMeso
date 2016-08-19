@@ -25,7 +25,7 @@
                         <a class="page-scroll" href="{{route('index')}}">Pocetna</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#nar">Narudzbine</a>
+                        <a class="page-scroll" href="{{route('order')}}">Narudzbine</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#recepti">Recepti</a>

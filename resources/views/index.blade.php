@@ -66,7 +66,7 @@
 	</div>
   <div  class="row btn-ord">
 		<div id="slide-down" class="col-md-12 bounce">
-        <a href="#" class="button-order">Narucite odmah</a>
+        <a href="{{route('order')}}" class="button-order">Narucite odmah</a>
       	</div>
         	</div>
 	<div class="row">
@@ -100,7 +100,7 @@
         <p>Dostavu narudzbina izvršavamo jednom mesečno.</p>
         <p>Sledeci rok za dostavu je</p>
         <p><strong>01/01/2000<strong></p>
-          <div id="btn">Naručite odmah</div>
+          <a href="{{route('order')}}" class="button-order2">Narucite odmah</a>
       </article>
       <article class="art-rght">
         <h3>DA SUMIRAMO ONO ŠTO JE BITNO ZA NAŠU BUŠU :</h3>

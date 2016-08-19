@@ -25,3 +25,10 @@ $app->get(
 		'uses'	=>	"HomeController@contact",
 	]
 );
+$app->get(
+	'order',
+	[
+		'as'	=>	"order",
+		'uses'	=>	"HomeController@order",
+	]
+);
