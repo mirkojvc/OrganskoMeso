@@ -11,7 +11,7 @@
               <div>
                
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                               </div>
             </li>
             <li>
@@ -19,7 +19,7 @@
               <div>
                 
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                  
               </div>
             </li>
@@ -28,7 +28,7 @@
               <div>
                 
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                   
               </div>
             </li>
@@ -37,7 +37,7 @@
               <div>
                
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                  
               </div>
             </li>
@@ -46,7 +46,7 @@
               <div>
                
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                
               </div>
             </li>
@@ -55,7 +55,7 @@
               <div>
                
                 <h1>Organsko meso</h1>
-                 <h3>Uzgajivaci organske Buse sa stare planine</h3>
+                 <h3>Sa stare planine</h3>
                  
               </div>
             </li>
@@ -118,8 +118,8 @@
 	</div>
 	<div class="row fixer">
     <div class="footer-header">
-		  <h2>Zdravo i prirodno</h2>
-      <p>Neki pametan tekst lalalalala</p>
+		  <h2>Prodaja mesa sa organske farme Busa</h2>
+      
       </div>
 	</div>
   
