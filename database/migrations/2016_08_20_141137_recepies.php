@@ -12,12 +12,13 @@ class Recepies extends Migration
      */
     public function up()
     {
-            $table->increments('id');
-            $table->string('img-path');
-            $table->string('heading');
-            $table->string('ing');
-            $table->string('how');
-
+        Schema::create('Recepies', function($table)
+        {
+            $table->increments('id')->unsigned();
+            $table->string('heading', 63);
+            $table->text('ingredients');
+            $table->text('how_to_make');
+        });
     }
 
     /**
@@ -27,6 +28,6 @@ class Recepies extends Migration
      */
     public function down()
     {
-         Schema::drop('recepies');
+        Schema::drop('Recepies');
     }
 }
