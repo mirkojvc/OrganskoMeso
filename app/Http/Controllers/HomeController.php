@@ -14,4 +14,13 @@ class HomeController extends Controller
      public function order() {
         return View('order');
     }
+    public function recepies() {
+        return View('recepies');
+    }
+     public function recept() {
+        return View('recept');
+    }
+     public function farms() {
+        return View('farms');
+    }
 }

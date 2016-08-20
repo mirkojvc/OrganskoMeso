@@ -28,10 +28,10 @@
                         <a class="page-scroll" href="{{route('order')}}">Narudzbine</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#recepti">Recepti</a>
+                        <a class="page-scroll" href="{{route('recepies')}}">Recepti</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#farme">Nase farme</a>
+                        <a class="page-scroll" href="{{route('farms')}}">Nase farme</a>
                     </li>
                      <li>
                         <a class="page-scroll" href="{{route('contact')}}">Kontakt</a>
@@ -47,11 +47,11 @@
       <div class="row foot" >
     <div id="bottom-nav" class="col-md-12">
       <ul>
-        <li><a href="">Pocetna</a></li>
-        <li><a href="">Recepti</a></li>
-        <li><a href="">Narudzbine</a></li>
-        <li><a href="">Naše farme</a></li>
-        <li><a href="">Kontakt</a></li>
+        <li><a href="{{route('index')}}">Pocetna</a></li>
+        <li><a href="{{route('recepies')}}">Recepti</a></li>
+        <li><a href="{{route('order')}}">Narudzbine</a></li>
+        <li><a href="{{route('farms')}}">Naše farme</a></li>
+        <li><a href="{{route('contact')}}">Kontakt</a></li>
       </ul>
     </div>
   </div>

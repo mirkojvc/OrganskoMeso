@@ -32,3 +32,25 @@ $app->get(
 		'uses'	=>	"HomeController@order",
 	]
 );
+$app->get(
+	'recepies',
+	[
+		'as'	=>	"recepies",
+		'uses'	=>	"HomeController@recepies",
+	]
+);
+$app->get(
+	'recepies',
+	[
+		'as'	=>	"recept",
+		'uses'	=>	"HomeController@recept",
+	]
+);
+$app->get(
+	'farms',
+	[
+		'as'	=>	"farms",
+		'uses'	=>	"HomeController@farms",
+	]
+);
+

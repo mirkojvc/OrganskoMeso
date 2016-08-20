@@ -6,7 +6,7 @@
 html{  overflow-x:hidden;}
 p,a,li{font-family: 'Indie Flower', cursive;}
  h1,h2,h3,h4{
-   font-family: 'Indie Flower', cursive;
+   font-family: 'Indie Flower', cursive!important;
    color:#990000;
  }
  #logo img{
@@ -301,6 +301,7 @@ width: 100%;
 }
 #bottom-nav a:hover{
   color:white;
+  cursor: pointer;
 
 }
 #bottom-nav a{

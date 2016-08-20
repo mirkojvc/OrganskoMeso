@@ -57,7 +57,7 @@ nav li a{
 }
 .heading{
     color: #900000!important;
-    font-size: 45px!important;
+    font-size: 55px!important;
     font-weight: bold;!important;
     cursor: pointer;
 }
@@ -75,6 +75,20 @@ nav li a:hover{
     }
 .order-fix{
     background:url(../img/meso.jpg) no-repeat 50% 50% fixed;
+    display: table;
+    width: 105%;
+    background-size: cover;
+    min-height: 450px;
+}
+.recepies-fix{
+    background:url(../img/biftek.jpg) no-repeat 50% 50% fixed;
+    display: table;
+    width: 105%;
+    background-size: cover;
+    min-height: 450px;
+}
+.farms-fix{
+    background:url(../img/farms.jpg) no-repeat 50% 50% fixed;
     display: table;
     width: 105%;
     background-size: cover;
@@ -124,3 +138,4 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
     text-align: center;
     font-family: 'Indie Flower', cursive;
 }
+/*recepie*/
