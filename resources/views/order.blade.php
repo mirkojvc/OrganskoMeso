@@ -22,19 +22,19 @@
 			<div class="col-md-3">
 				<label>
 						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/cow.png" width="250px" height="200px">
+						  <img src="../../src/img/eightcow.png" width="250px" height="200px">
 				</label>
 			</div>
 			<div class="col-md-3">
 				<label>
 						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/cow.png" width="250px" height="200px">
+						  <img src="../../src/img/quatercow.png" width="250px" height="200px">
 				</label>
 			</div>
 			<div class="col-md-3">
 				<label>
 						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/cow.png" width="250px" height="200px">
+						  <img src="../../src/img/halfcow.png" width="250px" height="200px">
 				</label>
 			</div>
 			<div class="col-md-3">
