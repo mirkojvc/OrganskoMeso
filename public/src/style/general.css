@@ -5,7 +5,7 @@
 }
 html{  overflow-x:hidden;}
 p,a,li{font-family: 'Indie Flower', cursive;}
- h1,h2,h3,h4{
+ h1,h2,h3,h4,h5{
    font-family: 'Indie Flower', cursive!important;
    color:#990000;
  }
@@ -160,11 +160,14 @@ width: 100%;
   background-size: 100% 100%;*/
   background-repeat: no-repeat;
 }
+.btn-ord{
+   position: absolute;
+   top:70%;
+   width: 100%;
+}
 
 #slide-down{
-  position: absolute;;
-  top:60%;
-  left: 44%;
+ text-align: center;
   border-radius: 10px;
   background-color: transparent;;
 }
@@ -344,7 +347,7 @@ width: 100%;
   line-height: 1.42;
   border-radius: 3px;
 }
-.cont-hold button{
+.button{
   width: 50%;
   display: block;
   margin:0 auto 16px;
@@ -363,4 +366,16 @@ width: 100%;
 .cont-hold h3 {
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
+}
+.cow{text-align: center;}
+.cow h5{}
+.kol{text-align: center;}
+.kol input{
+  width: 50%;
+  display: block;
+  margin:0 auto 16px;
+  border:1px solid #e5e5e5;
+  padding: 8px 10px;
+  line-height: 1.42;
+  border-radius: 3px;
 }

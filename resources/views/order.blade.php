@@ -19,29 +19,37 @@
 			<div class="col-md-12 quant">
 				<h1>Izaberite kolicinu</h1>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 cow">
 				<label>
-						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/eightcow.png" width="250px" height="200px">
+						  <input type="radio" name="cow" value="eight" />
+						  <img src="../../src/img/eightcow.png" width="250px" height="200px"/>
+						  <h4>One eight</h4>
 				</label>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 cow">
 				<label>
-						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/quatercow.png" width="250px" height="200px">
+						  <input type="radio" name="cow" value="quater" />
+						  <img src="../../src/img/quatercow.png" width="250px" height="200px"/>
+						  <h4>One Quater</h4>
 				</label>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 cow">
 				<label>
-						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/halfcow.png" width="250px" height="200px">
+						  <input type="radio" name="cow" value="half" />
+						  <img src="../../src/img/halfcow.png" width="250px" height="200px"/>
+						  <h4>One half</h4>
 				</label>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 cow">
 				<label>
-						  <input type="radio" name="fb" value="small" />
-						  <img src="../../src/img/cow.png" width="250px" height="200px">
+						  <input type="radio" name="cow" value="one" />
+						  <img src="../../src/img/cow.png" width="250px" height="200px"/>
+						  <h4>One whole</h4>
 				</label>
+			</div>
+			<div class="col-md-12 kol">
+				<h3>Kolicina</h3>
+				<input type="number" name="quantity" min="1" max="10"/>
 			</div>
 	</div>
 	<div class="row cont-hold">

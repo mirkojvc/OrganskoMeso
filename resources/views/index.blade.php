@@ -65,9 +65,11 @@
 		</div>
 	</div>
   <div  class="row btn-ord">
-		<div id="slide-down" class="col-md-12 bounce">
+    <div id="slide-down" class="col-md-4"></div>
+		<div id="slide-down" class="col-md-4">
         <a href="{{route('order')}}" class="button-order">Narucite odmah</a>
-      	</div>
+    </div>
+     <div id="slide-down" class="col-md-4"></div>
         	</div>
 	<div class="row">
   <div class="col-md-1"></div>

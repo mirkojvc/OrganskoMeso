@@ -39,18 +39,19 @@ $app->get(
 		'uses'	=>	"HomeController@recepies",
 	]
 );
-$app->get(
-	'recepies',
-	[
-		'as'	=>	"recept",
-		'uses'	=>	"HomeController@recept",
-	]
-);
+
 $app->get(
 	'farms',
 	[
 		'as'	=>	"farms",
 		'uses'	=>	"HomeController@farms",
 	]
+);
+
+$app->post(
+    'emailContact',
+    [
+        'uses' => 'HomeController@emailContact',
+    ]
 );
 
