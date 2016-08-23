@@ -10,7 +10,14 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
+$app->get(
+	'test',
+	[
+		'as'	=>	"test",
+		'uses'	=>	"TestController@index",
+	]
+);
+//
 $app->get(
 	'/',
 	[

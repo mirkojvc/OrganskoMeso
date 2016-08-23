@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Providers\EmailService;
+use App\Providers\RecepieService;
 
 class HomeController extends Controller
 {
@@ -18,10 +19,8 @@ class HomeController extends Controller
         return View('order');
     }
     public function recepies() {
-        return View('recepies');
-    }
-     public function recept() {
-        return View('recept');
+        $response = RecepieService::getRecepies();
+        return View('recepies', ['recepies' => $response]);
     }
      public function farms() {
         return View('farms');

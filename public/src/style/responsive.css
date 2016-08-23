@@ -168,7 +168,7 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .recepie a{
     width:300px;
     height: 200px;
-    background:url(../img/recept.jpg) 100% 100%;
+    /*background:url(../img/recept.jpg) 100% 100%;*/
      cursor: pointer;
     display: block;
 }

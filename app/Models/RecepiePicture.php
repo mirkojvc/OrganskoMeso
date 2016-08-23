@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class RecepiePicture extends Model
 {
 
     public $timestamnps = false;
 
-    protected $table = 'recepies';
+    protected $table = 'RecepiePictures';
 
     /**
      * The attributes that are mass assignable.
@@ -17,15 +17,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'heading', 
-        'ingredients',
-        'how_to_make',
+        'recepie_id', 
+        'picture',
     ];
 
     protected $cast = [
-        'heading'             =>  'string', 
-        'ingredients'         =>  'text',
-        'how_to_make'         =>  'text',
+        'recepie_id'    =>  'integer', 
+        'picture'       =>  'integer',
         
     ];
 
@@ -37,4 +35,8 @@ class User extends Authenticatable
     protected $hidden = [
       
     ];
+
+    public function recepie() {
+        return $this->belongsTo('App\Models\Recepie');
+    }
 }
