@@ -11,10 +11,10 @@ class EmailService
     public static function contactMessage($first_name, $last_name, $email, $phonenumber, $message) {
 	    try {
 	    	$to = "mirkojovic1996@gmail.com"; // this is your Email address
-		    $subject = "Form submission";
-		    $subject2 = "Copy of your form submission";
-		    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $message;
-		    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $message;
+		    $subject = "Upit";
+		    $subject2 = "Kopija upita";
+		    $message = $first_name . " " . $last_name . " je napisao:" . "\n\n" . $message;
+		    $message2 = "Kopija vaseg upita" . $first_name . "\n\n" . $message;
 
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
@@ -86,14 +86,14 @@ class EmailService
     		$order->spec_req = $spec_req;
 
     		$order->save();
-
+           
     		//slanje mejla
 
     		$to = "mirkojovic1996@gmail.com"; // this is your Email address
-		    $subject = "Form submission";
-		    $subject2 = "Copy of your form submission";
-		    $message = $f_name . " " . $l_name . " wrote the following:" . "\n\n" . $spec_req;
-		    $message2 = "Here is a copy of your message " . $f_name . "\n\n" . $spec_req;
+		    $subject = "Narudzbina";
+		    $subject2 = "Kopija narudzbine";
+		    $message = $f_name . " " . $l_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
+		    $message2 = "Kopija narudzbine koju ste porucili ". $f_name . " " . $l_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
 
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
