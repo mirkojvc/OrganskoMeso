@@ -10,7 +10,14 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
+$app->get(
+	'test',
+	[
+		'as'	=>	"test",
+		'uses'	=>	"TestController@index",
+	]
+);
+//
 $app->get(
 	'/',
 	[
@@ -39,18 +46,19 @@ $app->get(
 		'uses'	=>	"HomeController@recepies",
 	]
 );
-$app->get(
-	'recepies',
-	[
-		'as'	=>	"recept",
-		'uses'	=>	"HomeController@recept",
-	]
-);
+
 $app->get(
 	'farms',
 	[
 		'as'	=>	"farms",
 		'uses'	=>	"HomeController@farms",
 	]
+);
+
+$app->post(
+    'emailContact',
+    [
+        'uses' => 'HomeController@emailContact',
+    ]
 );
 

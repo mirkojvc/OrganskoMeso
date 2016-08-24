@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll heading" href="#page-top">Organsko meso</a>
+                <a class="navbar-brand page-scroll heading" href="{{route('index')}}">Organsko meso</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

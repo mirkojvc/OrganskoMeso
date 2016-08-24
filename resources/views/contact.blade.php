@@ -18,11 +18,13 @@
 </div>
 <div class="row cont-hold">
 	<h3>Posaljite nam poruku direktno</h3>
-	<input type="text" name="Ime" placeholder="Ime">
+	<form action="/emailContact" method="post">
+	<input type="text" name="first_name" placeholder="Ime">
+	<input type="text" name="last_name" placeholder="Prezime">
 	<input type="email" name="email" placeholder="Email">
-	<input type="text" name="telefon" placeholder="Broj telefona">
+	<input type="text" name="phone" placeholder="Broj telefona">
 	<textarea name="message" rows="10" placeholder="Poruka"/></textarea>
-	<button type="submit">Posalji</button>
-
+	<input type="submit" value="Pošalji" class="button">
+	</form>
 </div>
 @endsection
