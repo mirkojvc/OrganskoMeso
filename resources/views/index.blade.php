@@ -1,6 +1,6 @@
 @include('includes.header')
 @extends('layouts.master')
- 
+
 
 @section('content')
 	<div class="row">
@@ -9,7 +9,7 @@
             <li>
               <span>Image 01</span>
               <div>
-               
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
                               </div>
@@ -17,46 +17,46 @@
             <li>
               <span>Image 02</span>
               <div>
-                
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
-                 
+
               </div>
             </li>
             <li>
               <span>Image 03</span>
               <div>
-                
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
-                  
+
               </div>
             </li>
             <li>
               <span>Image 04</span>
               <div>
-               
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
-                 
+
               </div>
             </li>
             <li>
               <span>Image 05</span>
               <div>
-               
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
-               
+
               </div>
             </li>
             <li>
               <span>Image 06</span>
               <div>
-               
+
                 <h1>Organsko meso</h1>
                  <h3>Sa stare planine</h3>
-                 
+
               </div>
             </li>
             <li><!--...--></li>
@@ -87,7 +87,7 @@
                 <p>Buša se, dakle, hrani isključivo na  pašnjacima. Zimi se hrani livadskim senom koje isto potiče sa organskih pašnjaka a po potrebi se povremeno pušta i na ispašu (čak i kada su pašnjaci pokriveni snegom buša pase travu koja je ostala nepokošena tokom leta).  </p>!-->
                 <p>Buša se gaji po sistemu: krava-tele  a što znači da krava (majka) doji tele dokle god ima mleka - nema muže.</p>
                 <p>Saglasno svemu tome <strong>meso buše poseduje izuzetne karakteristike odnosno izuzetno je zdravo za ljudsku ishranu a posebno za ishranu dece.</strong></p>
-                <p>Sve uradjene analize potvrdjuju da je meso buše ubedljivo najkvalitetnije posmatrano u odnosu na bilo koju drugu vrstu mesa dobijeno od životinja koje su uzgajane u organskim ili koncencionalnim uslovima.</p>
+                <p>Sve uradjene analize potvrdjuju da je meso buše ubedljivo najkvalitetnije posmatrano u odnosu na bilo koju drugu vrstu mesa dobijeno od životinja koje su uzgajane u organskim ili konvencionalnim uslovima.</p>
               </section>
 
                 <!-- End ofArticles with texts!-->
@@ -119,8 +119,8 @@
 	<div class="row fixer">
     <div class="footer-header">
 		  <h2>Prodaja mesa sa organske farme Busa</h2>
-      
+
       </div>
 	</div>
-  
+
 	 @endsection
