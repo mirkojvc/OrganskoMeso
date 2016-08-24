@@ -8,7 +8,7 @@ use App\Providers\RecepieService;
 
 class HomeController extends Controller
 {
-    
+
     public function index() {
         return View('index');
     }
@@ -22,7 +22,12 @@ class HomeController extends Controller
         $response = RecepieService::getRecepies();
         return View('recepies', ['recepies' => $response]);
     }
-     public function farms() {
+    public function getRecepie($id) {
+        $response = RecepieService::getRecepie($id);
+        if (empty($response)) return View('response', ['code' => 3]);
+        else return View('recepie', ['recepie' => $response]);
+    }
+    public function farms() {
         return View('farms');
     }
     public function emailContact(Request $request) {
@@ -33,11 +38,22 @@ class HomeController extends Controller
         $message = $request->input('message');
         $response = EmailService::contactMessage($first_name, $last_name, $email, $phone, $message);
         var_dump($response);
-        if ($response === true) {
-            return View('messagesuccses'); //napravi pogled za uspešno poslat email
-        } 
-        else {
-            return View('messagefailed') ;//napravit pogled za neuspešno poslta email
-        }
+        if ($response === true) return View('response', ['code' => 1]);
+        else return View('response', ['code' => 2]);
+    }
+    public function sendOrder(Request $request) {
+        $package = $request->input('cow');
+        $quantity = $request->input('quantity');
+        $f_name = $request->input('f_name');
+        $s_name = $request->input('s_name');
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+        $place = $request->input('place');
+        $street = $request->input('street');
+        $post_code = $request->input('post_code');
+        $spec_req = $request->input('spec_req');
+        $response = EmailService::sendOrder($package, $quantity, $f_name, $s_name, $email, $phone, $place, $street, $post_code, $spec_req);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return View('response', ['code' => 16]);
     }
 }

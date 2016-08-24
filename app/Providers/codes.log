@@ -1,0 +1,16 @@
+code = 1 	uspešno poslata poruka
+code = 2 	nesupešno poslata poruka
+code = 3 	nepostojeći recept
+code = 4 	id recepta nije odgovarujećeg formata
+code = 5 	niste izabrali paket
+code = 6 	paket nije odogovarajućeg formata
+code = 7 	količina nije odogovarajućeg formata
+code = 8 	ime nije odgovarajućeg formata
+code = 9 	prezime nije odgovarajućeg formata
+code = 10	email nije odogovarajućeg formata
+code = 11	telefon nije odgovarajućeg formata
+code = 12	mesto nije odgovarajućeg formata
+code = 13	ulica i broj nisu odgovarajućeg formata
+code = 14	poštanski kod nije odgovarajućeg formata
+code = 15	poruka sa specijalnim zahtevima nije odgovarajućeg formata
+code = 16	uspešno poslata narudžbina

@@ -13,8 +13,8 @@
 		@if (!empty($recepies))
 			@foreach ($recepies as $recepie)
 				<div class="col-md-4 rec" >
-					<div class="recepie"> <a href="#"  ><img src="{{ $picture->picture }}/></a></div>
-					<a href="#"><h3>{{ $recepie->heading }}</h3></a>				
+					<div class="recepie"> <a href="#"  ><img src="{{ $recepie->picture }}"/></a></div>
+					<a href="/recepie/{{ $recepie->id }}"><h3>{{ $recepie->heading }}</h3></a>
 				</div>
 			@endforeach
 		@endif

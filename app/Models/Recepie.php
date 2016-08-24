@@ -17,16 +17,16 @@ class Recepie extends Model
      * @var array
      */
     protected $fillable = [
-        'heading', 
+        'heading',
         'ingredients',
         'how_to_make',
     ];
 
     protected $cast = [
-        'heading'             =>  'string', 
+        'heading'             =>  'string',
         'ingredients'         =>  'text',
         'how_to_make'         =>  'text',
-        
+
     ];
 
     /**
@@ -35,7 +35,7 @@ class Recepie extends Model
      * @var array
      */
     protected $hidden = [
-      
+
     ];
 
     public function pictures() {

@@ -304,6 +304,8 @@ class ComposerStaticInit2984a405e4641d837665a7ae1a441390
     public static $classMap = array (
         'AddTableRecepiePictures' => __DIR__ . '/../..' . '/database/migrations/2016_08_23_102250_add_table_RecepiePictures.php',
         'AlterTableAlterForeignKeyOnDeleteCascadeOnUpdateCascade' => __DIR__ . '/../..' . '/database/migrations/2016_08_23_113658_alter_table_alter_foreign_key_on_delete_cascade_on_update_cascade.php',
+        'AlterTableRecepiesAddColumnPicture' => __DIR__ . '/../..' . '/database/migrations/2016_08_24_124312_alter_table_recepies_add_column_picture.php',
+        'CreateTableOrder' => __DIR__ . '/../..' . '/database/migrations/2016_08_24_131833_create_table_order.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'ExampleTest' => __DIR__ . '/../..' . '/tests/ExampleTest.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

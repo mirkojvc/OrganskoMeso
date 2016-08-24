@@ -15,52 +15,55 @@
 	<p>Proporcionalno od narudzbine se dobija od svakog dela krave</p>
 	</div>
 </div>
-	<div class="row ">
-			<div class="col-md-12 quant">
-				<h1>Izaberite kolicinu</h1>
-			</div>
-			<div class="col-md-3 cow">
-				<label>
-						  <input type="radio" name="cow" value="eight" />
-						  <img src="../../src/img/eightcow.png" width="250px" height="200px"/>
-						  <h4>One eight</h4>
-				</label>
-			</div>
-			<div class="col-md-3 cow">
-				<label>
-						  <input type="radio" name="cow" value="quater" />
-						  <img src="../../src/img/quatercow.png" width="250px" height="200px"/>
-						  <h4>One Quater</h4>
-				</label>
-			</div>
-			<div class="col-md-3 cow">
-				<label>
-						  <input type="radio" name="cow" value="half" />
-						  <img src="../../src/img/halfcow.png" width="250px" height="200px"/>
-						  <h4>One half</h4>
-				</label>
-			</div>
-			<div class="col-md-3 cow">
-				<label>
-						  <input type="radio" name="cow" value="one" />
-						  <img src="../../src/img/cow.png" width="250px" height="200px"/>
-						  <h4>One whole</h4>
-				</label>
-			</div>
-			<div class="col-md-12 kol">
-				<h3>Kolicina</h3>
-				<input type="number" name="quantity" min="1" max="10"/>
-			</div>
-	</div>
-	<div class="row cont-hold">
-	<h3>Licni podaci</h3>
-	<input type="text" name="Ime" placeholder="Ime">
-	<input type="email" name="email" placeholder="Email">
-	<input type="text" name="telefon" placeholder="Broj telefona">
-	<input type="text" name="Mesto" placeholder="Mesto stanovanja">
-	<input type="text" name="ulica" placeholder="Ulica i broj">
-	<textarea name="message" rows="5" placeholder="Posebni zahtevi"/></textarea>
-	<button type="submit">Posalji</button>
-
-</div>
+<form action="/sendOrder" method="post">
+    <div class="row ">
+        <div class="col-md-12 quant">
+            <h1>Izaberite kolicinu</h1>
+        </div>
+        <div class="col-md-3 cow">
+            <label>
+                <input type="radio" name="cow" value="eight" />
+                <img src="../../src/img/eightcow.png" width="250px" height="200px" />
+                <h4>Jedna osmina</h4>
+            </label>
+        </div>
+        <div class="col-md-3 cow">
+            <label>
+                <input type="radio" name="cow" value="quater" />
+                <img src="../../src/img/quatercow.png" width="250px" height="200px" />
+                <h4>Jedna četvrtina</h4>
+            </label>
+        </div>
+        <div class="col-md-3 cow">
+            <label>
+                <input type="radio" name="cow" value="half" />
+                <img src="../../src/img/halfcow.png" width="250px" height="200px" />
+                <h4>Jedna polovina</h4>
+            </label>
+        </div>
+        <div class="col-md-3 cow">
+            <label>
+                <input type="radio" name="cow" value="one" />
+                <img src="../../src/img/cow.png" width="250px" height="200px" />
+                <h4>Jedna cela</h4>
+            </label>
+        </div>
+        <div class="col-md-12 kol">
+            <h3>Kolicina</h3>
+            <input type="number" name="quantity" min="1" max="10" required="required"/>
+        </div>
+    </div>
+    <div class="row cont-hold">
+        <h3>Licni podaci</h3>
+        <input type="text" name="f_name" placeholder="Ime" required="required" />
+        <input type="text" name="s_name" placeholder="Prezime" required="required"/>
+        <input type="email" name="email" placeholder="Email" required="required"/>
+        <input type="text" name="phone" placeholder="Broj telefona" required="required"/>
+        <input type="text" name="place" placeholder="Mesto stanovanja" required="required"/>
+        <input type="text" name="street" placeholder="Ulica i broj" required="required"/>
+        <input type="number" name="post_code" placeholder="Poštanski broj" required="required"/>
+        <textarea name="spec_req" rows="5" placeholder="Posebni zahtevi" required="required"/></textarea>
+        <input type="submit" value="Pošalji"/>
+    </div>
+</form>
 	@endsection
