@@ -179,3 +179,16 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
     height: 250px;
 }
 .rec a{text-align: center;text-decoration: none;color: #900000; cursor: pointer;}
+.rec-add{
+    
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    color:#900000;
+    cursor: pointer;
+   
+}
+.rec-add a{ text-decoration: none;color:black;}
+.admin_row{margin-top:200px; }
+.admin_log{box-shadow:3px 3px 3px 3px #888888;border-radius: 10px; }
+.admin_log h1{color: #900000;font-size: 50px;font-weight: bolder;}

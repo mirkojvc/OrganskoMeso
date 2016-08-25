@@ -10,7 +10,7 @@
     <!-- End of Meta tags !-->
     <!--  Links &connections !-->
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <title>Organic-index</title>
+    <title>Organic</title>
     <link rel="stylesheet" type="text/css" href="../../src/style/general.css"/>
     <link rel="stylesheet" type="text/css" href="../../src/style/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="../../src/style/responsive.css"/>
@@ -19,8 +19,7 @@
      <script type="text/javascript" src="../../src/js/bootstrap.js"></script>
     <script type="text/javascript" src="../../src/js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="../../src/js/modernizr.custom.86080.js"></script>
-
-    <link rel="icon" href="src/img/favicon.ico"/>
+    <link rel="icon" href="../../src/img/favicon.ico"/>
       <!--  End of Links &connections !-->
         <!--  Social !-->
           <!--Facebook !-->

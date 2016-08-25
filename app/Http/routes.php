@@ -46,12 +46,25 @@ $app->get(
 		'uses'	=>	"HomeController@recepies",
 	]
 );
-
+$app->get(
+	'admin',
+	[
+		'as'	=>	"admin",
+		'uses'	=>	"HomeController@admin",
+	]
+);
 $app->get(
 	'farms',
 	[
 		'as'	=>	"farms",
 		'uses'	=>	"HomeController@farms",
+	]
+);
+$app->get(
+	'recepie_form',
+	[
+		'as'	=>	"recepie_form",
+		'uses'	=>	"HomeController@recepie_form",
 	]
 );
 

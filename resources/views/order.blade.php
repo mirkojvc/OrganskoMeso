@@ -63,7 +63,7 @@
         <input type="text" name="street" placeholder="Ulica i broj" required="required"/>
         <input type="number" name="post_code" placeholder="Poštanski broj" required="required"/>
         <textarea name="spec_req" rows="5" placeholder="Posebni zahtevi" required="required"/></textarea>
-        <input type="submit" value="Pošalji"/>
+        <input type="submit" value="Pošalji" class="button"/>
     </div>
 </form>
 	@endsection

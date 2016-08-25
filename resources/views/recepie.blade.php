@@ -3,7 +3,7 @@
 
 @section('content')
 	<div class="row">
-   			<img src=""/>
+   			<img src="{{ $recepie->picture }}"/>
       </div>
       <div class="row">
       		<div class="col-md-2"></div>
@@ -15,16 +15,16 @@
       		</div>
       		<div class="col-md-4>">
       				<div class="col-md-6>">
-      				<img src=""/>
+      				<img src="{{ $recepie->picture }}"/>
       				</div>
       				<div class="col-md-6>">
-      				<img src=""/>
+      				<img src="{{ $recepie->picture }}"/>
       				</div>
       				<div class="col-md-6>">
-      				<img src=""/>
+      				<img src="{{ $recepie->picture }}"/>
       				</div>
       				<div class="col-md-6>">
-      				<img src=""/>
+      				<img src="{{ $recepie->picture }}"/>
       				</div>
       		</div>
       </div>

@@ -18,6 +18,12 @@ class HomeController extends Controller
      public function order() {
         return View('order');
     }
+    public function recepie_form() {
+        return View('recepie_form');
+    }
+    public function admin() {
+        return View('admin_panel');
+    }
     public function recepies() {
         $response = RecepieService::getRecepies();
         return View('recepies', ['recepies' => $response]);
