@@ -81,6 +81,12 @@ $app->post(
 		'uses'	=>	'HomeController@sendOrder',
 	]
 );
+$app->post(
+	'newRecepie',
+	[
+		'uses'	=>	'HomeController@newRecepie',
+	]
+);
 
 $app->get(
 	'recepie/{id}',

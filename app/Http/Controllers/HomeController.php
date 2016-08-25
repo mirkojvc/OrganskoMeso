@@ -62,4 +62,12 @@ class HomeController extends Controller
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return View('response', ['code' => 16]);
     }
+   public function  newRecepie (Request $request) {
+        $first_name = $request->input('first_name');
+        $last_name = $request->input('last_name');
+        $heading = $request->input('heading');
+        $ingredients = $request->input('ingredients');
+        $how_to_make = $request->input('how_to_make');
+      
+    }
 }
