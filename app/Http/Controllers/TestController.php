@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Providers\EmailService;
 use App\Models\Recepie;
 use App\Models\RecepiePicture;
+//use Mail;
 
 class TestController extends Controller
 {
     public function index() {
-        $recepie = Recepie::find(1);
-        foreach ($recepie->pictures as $picture) {
-            var_dump($picture->picture);
-        }
-        $picture = RecepiePicture::find(1);
-        var_dump($picture->recepie->heading);
+        $response = Mail::send('emails.welcome', ['key' => 'value'], function($message)
+                {
+                $message->to('mirkojovic1996@gmail.com', 'John Smith')->subject('Welcome!');
+            });
+        var_dump($response);
     }
 }

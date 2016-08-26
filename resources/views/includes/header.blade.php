@@ -5,7 +5,7 @@
     <!-- Meta tags !-->
     <meta charset="utf-8">
     <meta name="author" content="LLS">
-    <meta name="description" content="opis neki"/>
+    <meta name="description" content="Prodaja organskog mesa sa Stare planine , sa farme krava vrste Buša "/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- End of Meta tags !-->
     <!--  Links &connections !-->
@@ -23,15 +23,15 @@
       <!--  End of Links &connections !-->
         <!--  Social !-->
           <!--Facebook !-->
-              <meta property="og:title" content="">
-              <meta property="og:description" content="">
-              <meta property="og:image" content="">
+              <meta property="og:title" content="Organsko meso">
+              <meta property="og:description" content="Prodaja organskog mesa sa farme.">
+              <meta property="og:image" content="../../src/img/logo.png">
               <meta property="og:url" content="">
           <!--End of Facebook !-->
           <!-- Twitter !-->
-            <meta name="twitter:title" content="">
-            <meta name="twitter:description" content="">
-            <meta name="twitter:image" content="">
+            <meta name="twitter:title" content="Organsko meso">
+            <meta name="twitter:description" content="Prodaja organskog mesa sa farme.">
+            <meta name="twitter:image" content="../../src/img/logo.png">
             <meta name="twitter:card" content="">
             <!-- End of Twitter !-->
           <!--  End of social !-->

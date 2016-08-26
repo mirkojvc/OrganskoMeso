@@ -30,7 +30,7 @@ class EmailService
     }
 
     public static function sendOrder($package, $quantity, $f_name, $s_name, $email, $phone, $place, $street, $post_code, $spec_req) {
-    	try {
+    	//try {
     		$order = new Order();
 
     		$package = ValidationService::validateString($package, 16);
@@ -92,8 +92,8 @@ class EmailService
     		$to = "mirkojovic1996@gmail.com"; // this is your Email address
 		    $subject = "Narudzbina";
 		    $subject2 = "Kopija narudzbine";
-		    $message = $f_name . " " . $l_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
-		    $message2 = "Kopija narudzbine koju ste porucili ". $f_name . " " . $l_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
+		    $message = $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
+		    $message2 = "Kopija narudzbine koju ste porucili ". $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
 
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
@@ -104,8 +104,8 @@ class EmailService
 		    // You cannot use header and echo together. It's one or the other.
 
     		return true;
-    	} catch (\Exception $e) {
-    		return $e->getCode();
-    	}
+    	//} catch (\Exception $e) {
+    	//	return $e->getCode();
+    	//}
     }
 }

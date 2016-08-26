@@ -1,7 +1,8 @@
-<?php
-return [
-    'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
-    ],
-];
+'mailgun' => [
+    'domain' => 'your-mailgun-domain',
+    'secret' => 'your-mailgun-key',
+],
+
+'sparkpost' => [
+    'secret' => 'your-sparkpost-key',
+],

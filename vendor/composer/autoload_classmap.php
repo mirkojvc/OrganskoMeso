@@ -8,7 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddTableRecepiePictures' => $baseDir . '/database/migrations/2016_08_23_102250_add_table_RecepiePictures.php',
     'AlterTableAlterForeignKeyOnDeleteCascadeOnUpdateCascade' => $baseDir . '/database/migrations/2016_08_23_113658_alter_table_alter_foreign_key_on_delete_cascade_on_update_cascade.php',
+    'AlterTableRecepiesAddColumnApproved' => $baseDir . '/database/migrations/2016_08_26_163805_alter_table_recepies_add_column_approved.php',
     'AlterTableRecepiesAddColumnPicture' => $baseDir . '/database/migrations/2016_08_24_124312_alter_table_recepies_add_column_picture.php',
+    'CreateTableAdmins' => $baseDir . '/database/migrations/2016_08_26_165622_create_table_admins.php',
     'CreateTableOrder' => $baseDir . '/database/migrations/2016_08_24_131833_create_table_order.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'ExampleTest' => $baseDir . '/tests/ExampleTest.php',

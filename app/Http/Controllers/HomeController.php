@@ -43,7 +43,7 @@ class HomeController extends Controller
         $phone = $request->input('phone');
         $message = $request->input('message');
         $response = EmailService::contactMessage($first_name, $last_name, $email, $phone, $message);
-        var_dump($response);
+       // var_dump($response);
         if ($response === true) return View('response', ['code' => 1]);
         else return View('response', ['code' => 2]);
     }
@@ -59,6 +59,7 @@ class HomeController extends Controller
         $post_code = $request->input('post_code');
         $spec_req = $request->input('spec_req');
         $response = EmailService::sendOrder($package, $quantity, $f_name, $s_name, $email, $phone, $place, $street, $post_code, $spec_req);
+        //var_dump($response);
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return View('response', ['code' => 16]);
     }

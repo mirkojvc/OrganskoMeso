@@ -10,6 +10,10 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+//Test rute
+
+if (session_status() === PHP_SESSION_NONE) session_start();
+
 $app->get(
 	'test',
 	[
@@ -17,7 +21,7 @@ $app->get(
 		'uses'	=>	"TestController@index",
 	]
 );
-//
+//User rute
 $app->get(
 	'/',
 	[
@@ -44,13 +48,6 @@ $app->get(
 	[
 		'as'	=>	"recepies",
 		'uses'	=>	"HomeController@recepies",
-	]
-);
-$app->get(
-	'admin',
-	[
-		'as'	=>	"admin",
-		'uses'	=>	"HomeController@admin",
 	]
 );
 $app->get(
@@ -92,5 +89,35 @@ $app->get(
 	'recepie/{id}',
 	[
 		'uses'	=>	"HomeController@getRecepie",
+	]
+);
+//Admin rute
+$app->get(
+	'admin',
+	[
+		'as'	=>	"admin",
+		'uses'	=>	"AdminController@getLogIn",
+	]
+);
+
+$app->post(
+	'adminLogIn',
+	[
+		'uses'	=>	'AdminController@postLogIn',
+	]
+);
+
+$app->get(
+	'adminPanel',
+	[
+		'as'	=>	"admin",
+		'uses'	=>	"AdminController@getAdminPanel",
+	]
+);
+
+$app->get(
+	'resetPassword',
+	[
+		'uses'	=>	"AdminController@getResetPassword",
 	]
 );
