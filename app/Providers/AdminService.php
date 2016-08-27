@@ -19,6 +19,8 @@ class AdminService
             if (Hash::check($password.$admin->passwordSalt, $admin->password) === false) throw new \Exception("Pogrešno ste ukucali lozinku", 18);
 
             $_SESSION['current_admin'] = $admin->id;
+
+            return true;
         } catch (\Exception $e) {
             return $e->getCode();
         }
@@ -39,7 +41,7 @@ class AdminService
             $admin->reset_token = str_random(16);
 
             $admin->save();
-            
+
             Mail::send('emails.welcome', ['key' => 'value'], function($message)
                 {
                 $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
@@ -50,15 +52,15 @@ class AdminService
         }
     }
 
-    public static function($token) {
+    public static function resetToken($token) {
         try {
             $admin = Admin::where('reset_token', '=', $token)->first();
 
             if (empty($admin)) throw new \Exception("Nepostojeći token", 21);
-            
-            
+
+
         } catch (\Exception $e) {
             return $e->getCode();
         }
-    }  
+    }
 }

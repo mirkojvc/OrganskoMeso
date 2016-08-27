@@ -5,7 +5,7 @@
 			<div class="col-md-9">
 				<h1>Organsko meso admin panel</h1>
 			</div>
-			<div class="col-md-3"><h2>Zdravo,{{name}}</h2><i class="fa-li fa fa-check-square"><a href="#">Podesavanje naloga</a></div>
+			<div class="col-md-3"><h2>Zdravo</h2><i class="fa-li fa fa-check-square"><a href="#">Podesavanje naloga</a></div>
 		</div>
 		<div class="row">
 		<div class="col-md-3">

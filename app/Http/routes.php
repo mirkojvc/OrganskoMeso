@@ -110,7 +110,6 @@ $app->post(
 $app->get(
 	'adminPanel',
 	[
-		'as'	=>	"admin",
 		'uses'	=>	"AdminController@getAdminPanel",
 	]
 );

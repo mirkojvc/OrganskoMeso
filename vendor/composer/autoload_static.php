@@ -331,6 +331,7 @@ class ComposerStaticInit2984a405e4641d837665a7ae1a441390
     );
 
     public static $classMap = array (
+        'AddAdmin' => __DIR__ . '/../..' . '/database/migrations/2016_08_27_093330_add_admin.php',
         'AddTableRecepiePictures' => __DIR__ . '/../..' . '/database/migrations/2016_08_23_102250_add_table_RecepiePictures.php',
         'AlterTableAlterForeignKeyOnDeleteCascadeOnUpdateCascade' => __DIR__ . '/../..' . '/database/migrations/2016_08_23_113658_alter_table_alter_foreign_key_on_delete_cascade_on_update_cascade.php',
         'AlterTableRecepiesAddColumnApproved' => __DIR__ . '/../..' . '/database/migrations/2016_08_26_163805_alter_table_recepies_add_column_approved.php',

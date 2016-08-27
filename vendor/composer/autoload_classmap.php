@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddAdmin' => $baseDir . '/database/migrations/2016_08_27_093330_add_admin.php',
     'AddTableRecepiePictures' => $baseDir . '/database/migrations/2016_08_23_102250_add_table_RecepiePictures.php',
     'AlterTableAlterForeignKeyOnDeleteCascadeOnUpdateCascade' => $baseDir . '/database/migrations/2016_08_23_113658_alter_table_alter_foreign_key_on_delete_cascade_on_update_cascade.php',
     'AlterTableRecepiesAddColumnApproved' => $baseDir . '/database/migrations/2016_08_26_163805_alter_table_recepies_add_column_approved.php',

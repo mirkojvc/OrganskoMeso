@@ -19,17 +19,18 @@ class AdminController extends Controller
         $password = $request->input('password');
         $response = AdminService::logIn($username, $password);
         if (is_numeric($response)) return View('response', ['code' => $response]);
-        else redirect ('adminPanel');
+        else return redirect ('adminPanel');
     }
 
     public static function getAdminPanel() {
-        if (AdminService::getCurrentAdmin() === false) {
+        $response = AdminService::getCurrentAdmin();
+        if ($response === false) {
             return View('response', ['code' => 19]);
         }
         else return View('admin_panel');
     }
 
     public static function postRecepie() {
-        
-    } 
+
+    }
 }
