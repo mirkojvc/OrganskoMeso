@@ -19,3 +19,6 @@ code = 18	pogrešno ste ukucali lozinku
 code = 19	niste prijavljeni
 code = 20	pogrešan email dat za reset lozinke
 code = 21	nepostojeći token
+code = 22	naslov recepta nije odgovarajućeg formata
+code = 23	sastojci nisu odogovarajućeg formata
+code = 24	način spremanja nije odgovarajućeg formata

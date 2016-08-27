@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\ValidationService;
 use App\Models\Admin;
+use App\Models\Recepie;
 //use App\Models\Order;
 
 class AdminService
@@ -30,6 +31,10 @@ class AdminService
         $admin = Admin::find($_SESSION['current_admin']);
         if (empty($admin)) return false;
         else return true;
+    }
+
+    public static function getRecepies() {
+        return Recepie::get();
     }
 
     public static function resetPassword($email) {
@@ -59,6 +64,35 @@ class AdminService
             if (empty($admin)) throw new \Exception("Nepostojeći token", 21);
 
 
+        } catch (\Exception $e) {
+            return $e->getCode();
+        }
+    }
+
+    public static function newRecepie($heading, $ingredients, $how_to_make, $picture) {
+        try {
+            if (self::getCurrentAdmin() === false) $approved = false;
+            else $approved = true;
+
+            $recepie = new Recepie();
+
+            $heading = ValidationService::validateString($heading, 63);
+            if ($heading === false) throw new \Exception("Naslov recepta nije odgovarajućeg formata", 22);
+            $recepie->heading = $heading;
+
+            $ingredients = ValidationService::validateString($ingredients);
+            if ($ingredients === false) throw new \Exception("Sastojci nisu odogovarajućeg formata", 23);
+            $recepie->ingredients = $ingredients;
+
+            $how_to_make = ValidationService::validateString($how_to_make);
+            if ($how_to_make === false) throw new \Exception("Način spremanja nije odgovarajućeg formata", 24);
+            $recepie->how_to_make = $how_to_make;
+
+            $recepie->picture = '/src/img/recepie.jpg';
+
+            $recepie->save();
+
+            return true;
         } catch (\Exception $e) {
             return $e->getCode();
         }

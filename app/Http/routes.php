@@ -78,12 +78,6 @@ $app->post(
 		'uses'	=>	'HomeController@sendOrder',
 	]
 );
-$app->post(
-	'newRecepie',
-	[
-		'uses'	=>	'HomeController@newRecepie',
-	]
-);
 
 $app->get(
 	'recepie/{id}',
@@ -118,5 +112,20 @@ $app->get(
 	'resetPassword',
 	[
 		'uses'	=>	"AdminController@getResetPassword",
+	]
+);
+
+$app->get(
+	'approveRecepie',
+	[
+		'uses'	=>	"AdminController@getApproveRecepie",
+	]
+);
+
+
+$app->post(
+	'newRecepie',
+	[
+		'uses'	=>	'AdminController@postNewRecepie',
 	]
 );
