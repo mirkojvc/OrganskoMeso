@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../src/style/general.css"/>
     <link rel="stylesheet" type="text/css" href="../../src/style/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="../../src/style/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="../../src/style/font-awesome.min.css"/>
    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="../../src/js/main.js"></script>
      <script type="text/javascript" src="../../src/js/bootstrap.js"></script>
