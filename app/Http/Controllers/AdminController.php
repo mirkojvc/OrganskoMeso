@@ -27,7 +27,7 @@ class AdminController extends Controller
         if ($response === false) {
             return View('response', ['code' => 19]);
         }
-        else return View('admin_panel');
+        else return View('adminadd');
     }
 
     public static function postRecepie() {
