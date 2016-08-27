@@ -38,3 +38,23 @@ $(function() {
         event.preventDefault();
     });
 });
+function inputBtn(){
+    var input=document.createElement('input');
+    input.type="file";
+    setTimeout(function(){
+        $(input).click();
+    },200);
+}
+var counter = 1;
+var limit = 3;
+function inputBtn(images_add){
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+     }
+     else {
+          var newdiv = document.createElement('div');
+          newdiv.innerHTML = "Entry " + (counter + 1) + " <br><input type='file' name='img'>";
+          document.getElementById(images_add).appendChild(newdiv);
+          counter++;
+     }
+}

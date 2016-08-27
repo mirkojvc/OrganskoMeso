@@ -27,10 +27,25 @@ class AdminController extends Controller
         if ($response === false) {
             return View('response', ['code' => 19]);
         }
-        else return View('adminadd');
+        else return View('admin_panel');
     }
 
-    public static function postRecepie() {
+    public static function getApproveRecepie() {
+        if (AdminService::getCurrentAdmin() === false) {
+            return View('response', ['code' => 19]);
+        } else {
+            $recepies = AdminService::getRecepies();
+            return View('admin_approve', ['recepies' => $recepies]);
+        }
+    }
 
+    public static function postNewRecepie(Request $request) {
+        $heading = $request->input('heading');
+        $ingredients = $request->input('ingredients');
+        $how_to_make = $request->input('how_to_make');
+        $picture = $request->input('picture');
+        $response = AdminService::newRecepie($heading, $ingredients, $how_to_make, $picture);
+        if (is_numeric($response)) return View('admin_response', ['code' => $response]);
+        else return View('admin_recepie', ['response' => 'Uspešno ste dodali novi recept']);
     }
 }

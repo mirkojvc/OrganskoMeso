@@ -1,11 +1,6 @@
-@include('includes.header')
-@extends('layouts.master')
-
-@section('content')
-<div class="row  recepies-fix">
-
-</div>
-<div class="row cont-hold">
+@extends('admin')
+@section('admin_content')
+		<div class="row cont-hold">
     <h3>Unesite podatke recepta</h3>
     <form action="" method="post">
         <input type="text" name="first_name" placeholder="Ime">
@@ -20,5 +15,7 @@
         <input type="submit" value="Pošalji" class="button">
     </form>
 </div>
+			
+
 
 @endsection

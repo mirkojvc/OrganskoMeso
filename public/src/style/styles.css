@@ -928,6 +928,7 @@ h1.page-header {
 	height: 65px;
 	overflow: scroll;
 }
+button{display: hidden;}
 
 
 

@@ -43,7 +43,6 @@ class HomeController extends Controller
         $phone = $request->input('phone');
         $message = $request->input('message');
         $response = EmailService::contactMessage($first_name, $last_name, $email, $phone, $message);
-       // var_dump($response);
         if ($response === true) return View('response', ['code' => 1]);
         else return View('response', ['code' => 2]);
     }
@@ -62,13 +61,5 @@ class HomeController extends Controller
         //var_dump($response);
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return View('response', ['code' => 16]);
-    }
-   public function  newRecepie (Request $request) {
-        $first_name = $request->input('first_name');
-        $last_name = $request->input('last_name');
-        $heading = $request->input('heading');
-        $ingredients = $request->input('ingredients');
-        $how_to_make = $request->input('how_to_make');
-      
     }
 }
