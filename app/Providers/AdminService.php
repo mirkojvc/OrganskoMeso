@@ -34,7 +34,7 @@ class AdminService
     }
 
     public static function getRecepies() {
-        return Recepie::get();
+        if (AdminService::getCurrentAdmin() === true) return Recepie::get();
     }
 
     public static function resetPassword($email) {

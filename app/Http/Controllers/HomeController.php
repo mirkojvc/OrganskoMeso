@@ -33,6 +33,15 @@ class HomeController extends Controller
         if (empty($response)) return View('response', ['code' => 3]);
         else return View('recepie', ['recepie' => $response]);
     }
+    public function recepie_form_post(Request $request) {
+        $heading = $request->input('heading');
+        $ingredients = $request->input('ingredients');
+        $how_to_make = $request->input('how_to_make');
+        $picture = '/src/img/recepie.jpg';
+        $response = RecepieService::createRecepie($heading, $ingredients, $how_to_make, $picture);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return View('response', ['code' => 25]);
+    } 
     public function farms() {
         return View('farms');
     }
@@ -58,7 +67,7 @@ class HomeController extends Controller
         $post_code = $request->input('post_code');
         $spec_req = $request->input('spec_req');
         $response = EmailService::sendOrder($package, $quantity, $f_name, $s_name, $email, $phone, $place, $street, $post_code, $spec_req);
-        //var_dump($response);
+        var_dump($response);
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return View('response', ['code' => 16]);
     }

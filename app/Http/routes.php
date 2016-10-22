@@ -64,7 +64,13 @@ $app->get(
 		'uses'	=>	"HomeController@recepie_form",
 	]
 );
-
+$app->post(
+	'recepie_form_post',
+	[
+		'as'	=>	"recepie_form_post",
+		'uses'	=>	"HomeController@recepie_form_post",
+	]
+);
 $app->post(
     'emailContact',
     [

@@ -8,6 +8,10 @@ use App\Models\Order;
 
 class EmailService
 {
+    private static function getAdminMail() {
+        return 'mirkojovic1996@gmail.com';
+    }
+
     public static function contactMessage($first_name, $last_name, $email, $phonenumber, $message) {
 	    try {
 	    	$to = "mirkojovic1996@gmail.com"; // this is your Email address
@@ -30,7 +34,7 @@ class EmailService
     }
 
     public static function sendOrder($package, $quantity, $f_name, $s_name, $email, $phone, $place, $street, $post_code, $spec_req) {
-    	//try {
+    	try {
     		$order = new Order();
 
     		$package = ValidationService::validateString($package, 16);
@@ -89,23 +93,22 @@ class EmailService
            
     		//slanje mejla
 
-    		$to = "mirkojovic1996@gmail.com"; // this is your Email address
+            $adminMail = self::getAdminMail();
+
+    		$to = $adminMail;
 		    $subject = "Narudzbina";
 		    $subject2 = "Kopija narudzbine";
 		    $message = $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
 		    $message2 = "Kopija narudzbine koju ste porucili ". $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
-
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
-		    mail($to,$subject,$message,$headers);
-		    mail($email,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-		    //echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-		    // You can also use header('Location: thank_you.php'); to redirect to another page.
-		    // You cannot use header and echo together. It's one or the other.
+		    $mail1 = mail($to,$subject,$message,$headers);
+		    $mail2 = mail($email,$subject2,$message2,$headers2);
 
-    		return true;
-    	//} catch (\Exception $e) {
-    	//	return $e->getCode();
-    	//}
+    		if ($mail1 === false) throw new \Exception("Neuspešno poslata narudžbina", 26);
+            return true;
+    	} catch (\Exception $e) {
+    		return $e->getCode();
+    	}
     }
 }
