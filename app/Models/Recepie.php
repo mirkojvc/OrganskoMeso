@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Recepie extends Model
 {
 
-    public $timestamnps = false;
+    public $timestamps = false;
 
     protected $table = 'Recepies';
 
@@ -20,13 +20,16 @@ class Recepie extends Model
         'heading',
         'ingredients',
         'how_to_make',
+        'picture',
+        'approved',
     ];
 
     protected $cast = [
-        'heading'             =>  'string',
-        'ingredients'         =>  'text',
-        'how_to_make'         =>  'text',
-
+        'heading'       =>  'string',
+        'ingredients'   =>  'string',
+        'how_to_make'   =>  'string',
+        'picture'       =>  'string',
+        'approved'      =>  'boolean',    
     ];
 
     /**

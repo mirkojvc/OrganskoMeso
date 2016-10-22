@@ -7,9 +7,7 @@
 </div>
 <div class="row cont-hold">
     <h3>Unesite podatke recepta</h3>
-    <form action="" method="post">
-        <input type="text" name="first_name" placeholder="Ime">
-        <input type="text" name="last_name" placeholder="Prezime">
+    <form action="recepie_form_post" method="post">
         <input type="text" name="heading" placeholder="Naslov recepta">
        <div id="images_add">
         <input type="file" name="img">
