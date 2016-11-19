@@ -28,42 +28,15 @@ class AdminService
     }
 
     public static function getCurrentAdmin() {
-        $admin = Admin::find($_SESSION['current_admin']);
-        if (empty($admin)) return false;
-        else return true;
+        if (isset($_SESSION['current_admin'])) return true;
+        else return false;
     }
 
     public static function getRecepies() {
-        if (AdminService::getCurrentAdmin() === true) return Recepie::get();
-    }
-
-    public static function resetPassword($email) {
         try {
-            $admin = Admin::where('email', '=', $email)->first();
+            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
-            if (empty($admin)) throw new \Exception("Korisnik sa tim email-om ne postoji", 20);
-
-            $admin->reset_token = str_random(16);
-
-            $admin->save();
-
-            Mail::send('emails.welcome', ['key' => 'value'], function($message)
-                {
-                $message->to('foo@example.com', 'John Smith')->subject('Welcome!');
-            });
-
-        } catch (\Exception $e) {
-            return $e->getCode();
-        }
-    }
-
-    public static function resetToken($token) {
-        try {
-            $admin = Admin::where('reset_token', '=', $token)->first();
-
-            if (empty($admin)) throw new \Exception("Nepostojeći token", 21);
-
-
+            return Recepie::orderBy('date', 'DESC')->get();
         } catch (\Exception $e) {
             return $e->getCode();
         }
@@ -71,28 +44,42 @@ class AdminService
 
     public static function newRecepie($heading, $ingredients, $how_to_make, $picture) {
         try {
-            if (self::getCurrentAdmin() === false) $approved = false;
-            else $approved = true;
-
-            $recepie = new Recepie();
+            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             $heading = ValidationService::validateString($heading, 63);
             if ($heading === false) throw new \Exception("Naslov recepta nije odgovarajućeg formata", 22);
-            $recepie->heading = $heading;
 
             $ingredients = ValidationService::validateString($ingredients);
             if ($ingredients === false) throw new \Exception("Sastojci nisu odogovarajućeg formata", 23);
-            $recepie->ingredients = $ingredients;
 
             $how_to_make = ValidationService::validateString($how_to_make);
             if ($how_to_make === false) throw new \Exception("Način spremanja nije odgovarajućeg formata", 24);
+
+            $recepie = new Recepie();
+            $recepie->heading = $heading;
+            $recepie->ingredients = $ingredients;
             $recepie->how_to_make = $how_to_make;
-
-            $recepie->picture = '/src/img/recepie.jpg';
-
+            $recepie->picture = ImageService::uploadImage($picture);
+            $recepie->approved = true;
             $recepie->save();
 
             return true;
+        } catch (\Exception $e) {
+            return $e->getCode();
+        }
+    }
+
+    public static function recepieStatus($id) {
+        try {
+            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+
+            $recepie = Recepie::find($id);
+            if (empty($recepie)) throw new \Exception("Nepostojeći recept", 3);
+
+            $recepie->approved = boolval($recepie->approved) === false ? true : false;
+
+            $recepie->save();
+            return $recepie->approved;
         } catch (\Exception $e) {
             return $e->getCode();
         }

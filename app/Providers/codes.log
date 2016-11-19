@@ -24,3 +24,4 @@ code = 23	sastojci nisu odogovarajućeg formata
 code = 24	način spremanja nije odgovarajućeg formata
 code = 25   uspešno poslat recept
 code = 26	neuspešno poslata narudžbina
+code = 27   nemate dozvolu

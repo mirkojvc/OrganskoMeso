@@ -61,6 +61,11 @@ nav li a{
     font-weight: bold;!important;
     cursor: pointer;
 }
+@media (max-width: 400px){
+    .heading{
+        font-size: 30px!important;
+    }
+}
 nav li a:hover{
    font-weight: bolder!important;
    text-shadow: 2px 2px #fff;
@@ -166,8 +171,6 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
      vertical-align:middle
 }
 .recepie a{
-    width:300px;
-    height: 200px;
     /*background:url(../img/recept.jpg) 100% 100%;*/
      cursor: pointer;
     display: block;
@@ -175,8 +178,6 @@ label > input:hover + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .rec{
     margin: 30px 20px;
     cursor: pointer;
-    width:300px;
-    height: 250px;
 }
 .rec a{text-align: center;text-decoration: none;color: #900000; cursor: pointer;}
 .rec-add{

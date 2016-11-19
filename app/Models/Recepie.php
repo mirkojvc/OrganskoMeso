@@ -22,6 +22,7 @@ class Recepie extends Model
         'how_to_make',
         'picture',
         'approved',
+        'date',
     ];
 
     protected $cast = [
@@ -29,7 +30,8 @@ class Recepie extends Model
         'ingredients'   =>  'string',
         'how_to_make'   =>  'string',
         'picture'       =>  'string',
-        'approved'      =>  'boolean',    
+        'approved'      =>  'boolean',
+        'date'          =>  'dateTime',
     ];
 
     /**

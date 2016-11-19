@@ -11,15 +11,17 @@ use App\Models\Recepie;
 class AdminController extends Controller
 {
     public static function getLogIn() {
-        return View('admin_login');
+        if (AdminService::getCurrentAdmin()) return redirect('adminPanel');
+        else return View('admin_login');
     }
 
     public static function postLogIn(Request $request) {
         $username = $request->input('username');
         $password = $request->input('password');
         $response = AdminService::logIn($username, $password);
+        var_dump($response);
         if (is_numeric($response)) return View('response', ['code' => $response]);
-        else return redirect ('adminPanel');
+        else return redirect('adminPanel');
     }
 
     public static function getAdminPanel() {
@@ -43,9 +45,15 @@ class AdminController extends Controller
         $heading = $request->input('heading');
         $ingredients = $request->input('ingredients');
         $how_to_make = $request->input('how_to_make');
-        $picture = $request->input('picture');
+        $picture = $request->file('picture');
         $response = AdminService::newRecepie($heading, $ingredients, $how_to_make, $picture);
-        if (is_numeric($response)) return View('admin_response', ['code' => $response]);
-        else return View('admin_recepie', ['response' => 'Uspešno ste dodali novi recept']);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return redirect('approveRecepie');
+    }
+
+    public static function postRecepieStatus($id) {
+        $response = AdminService::recepieStatus($id);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return redirect('approveRecepie');
     }
 }

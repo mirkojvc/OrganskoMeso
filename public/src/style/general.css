@@ -51,6 +51,27 @@ width: 100%;
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s;
 }
+.recepie-fix {
+    width: 105%;
+    display: table;
+    min-height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:50% 50% !important;
+    margin-left: -15px;
+}
+.instruction{
+    text-align: center;
+}
+.instruction h1{
+    color: #900000;
+}
+.instruction h3{
+    text-decoration: underline;
+}
+.instruction p{
+    font-size: 1.4em;
+}
 .slideshow li div {
     z-index: 1000;
     position: absolute;
@@ -381,4 +402,8 @@ width: 100%;
 }
 .admin_panel__holder{
   
+}
+
+#images_add{
+  margin-bottom: 16px;
 }

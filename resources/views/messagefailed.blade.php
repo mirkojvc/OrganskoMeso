@@ -1,11 +1,11 @@
 @include('includes.header')
 @extends('layouts.master')
- 
+
 
 @section('content')
 	<div class="row  farms-fix">
     <div class="footer-header">
-		  
+
       </div>
 	</div>
 	<div class="row">

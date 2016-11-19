@@ -130,8 +130,15 @@ $app->get(
 
 
 $app->post(
-	'newRecepie',
+	'post-new-recepie',
 	[
 		'uses'	=>	'AdminController@postNewRecepie',
+	]
+);
+
+$app->get(
+	'recepie-status/{id}',
+	[
+		'uses'	=>	'AdminController@postRecepieStatus',
 	]
 );

@@ -14,7 +14,7 @@ class EmailService
 
     public static function contactMessage($first_name, $last_name, $email, $phonenumber, $message) {
 	    try {
-	    	$to = "mirkojovic1996@gmail.com"; // this is your Email address
+	    	$to = self::getAdminMail();
 		    $subject = "Upit";
 		    $subject2 = "Kopija upita";
 		    $message = $first_name . " " . $last_name . " je napisao:" . "\n\n" . $message;
@@ -23,11 +23,7 @@ class EmailService
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
 		    mail($to,$subject,$message,$headers);
-		    mail($email,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-		    //echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-		    // You can also use header('Location: thank_you.php'); to redirect to another page.
-		    // You cannot use header and echo together. It's one or the other.
-		    return true;
+		    return mail($email,$subject2,$message2,$headers2);
 	    } catch (\Exception $e) {
 	    	return $e->getCode();
 	    }
@@ -90,7 +86,7 @@ class EmailService
     		$order->spec_req = $spec_req;
 
     		$order->save();
-           
+
     		//slanje mejla
 
             $adminMail = self::getAdminMail();

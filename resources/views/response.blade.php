@@ -30,7 +30,7 @@
 
 		</div>
 		<div class="col-md-3"></div>
-	
+
 	@elseif ($code === 4)
 		<div class="col-md-3"></div>
 		<div class="col-md-6 messagefail">
@@ -79,7 +79,7 @@
 				<h1>email nije odogovarajućeg formata</h1>
 
 		</div>
-		
+
 	@elseif ($code === 11)
 		<div class="col-md-3"></div>
 		<div class="col-md-6 messagefail">
@@ -136,7 +136,14 @@
 
 		</div>
 		<div class="col-md-3"></div>
+	@elseif ($code === 27)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Nemate dozvolu</h1>
+
+		</div>
+		<div class="col-md-3"></div>
 	@endif
 		</div>
-		
+
 @endsection

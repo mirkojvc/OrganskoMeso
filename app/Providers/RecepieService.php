@@ -4,12 +4,13 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Providers\ValidationService;
+use App\Providers\ImageService;
 use App\Models\Recepie;
 
 class RecepieService
 {
 	public static function getRecepies() {
-		return Recepie::where('approved', '=', true)->get();
+		return Recepie::where('approved', '=', true)->orderBy('date', 'DESC')->get();
 	}
 
 	public static function getRecepie($recepie_id) {
@@ -39,7 +40,7 @@ class RecepieService
 			$recepie->heading = $heading;
 			$recepie->ingredients = $ingredients;
 			$recepie->how_to_make = $how_to_make;
-			$recepie->picture = $picture;	
+			$recepie->picture = ImageService::uploadImage($picture);
 			$recepie->save();
 			return true;
 		} catch (\Exception $e) {
