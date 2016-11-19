@@ -8,6 +8,7 @@
 <link href="../../src/style/bootstrap.css" rel="stylesheet">
 <link href="../../src/style/datepicker3.css" rel="stylesheet">
 <link href="../../src/style/admin.css" rel="stylesheet">
+<link href="../../src/style/general.css" rel="stylesheet">
 <script src="../../src/js/jquery-1.11.1.min.js"></script>
 <script src="../../src/js/bootstrap-datepicker.js"></script>
 
@@ -34,7 +35,6 @@
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
 						<a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a>
-						
 					</li>
 				</ul>
 			</div>
@@ -42,17 +42,14 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
-	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 col-md-3 sidebar">
 
 		<ul class="nav menu">
 
-			<li ><a href="/approveRecepie"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Odobri recept</a></li>
-
-			<li><a href="/newRecepie"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Dodaj recept</a></li>
+			<li ><a href="/approveRecepie"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Recepti</a></li>
 			<li><a href="/newRecepie"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Narudzbine</a></li>
 				</ul>
 			</li>
-			
 		</ul>
 
 	</div><!--/.sidebar-->

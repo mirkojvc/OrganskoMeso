@@ -20,14 +20,14 @@ class Admin extends Model
         'username',
         'email',
         'passwordSalt',
-        'reset_token', 
+        'reset_token',
     ];
 
     protected $cast = [
         'username'      =>  'string',
         'email'         =>  'string',
         'passwordSalt'  =>  'string',
-        'reset_token'   =>  'string', 
+        'reset_token'   =>  'string',
     ];
 
     /**
