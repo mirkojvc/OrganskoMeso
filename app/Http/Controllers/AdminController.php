@@ -15,6 +15,13 @@ class AdminController extends Controller
         else return View('admin_login');
     }
 
+    public static function logOut() {
+        $response = AdminService::logOut();
+        //var_dump($response);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return redirect('/');
+    }
+
     public static function postLogIn(Request $request) {
         $username = $request->input('username');
         $password = $request->input('password');

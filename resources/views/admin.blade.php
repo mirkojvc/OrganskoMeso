@@ -38,7 +38,7 @@
                 <a class="navbar-brand" href="#"><span>Admin</span>Panel</a>
                 <ul class="user-menu">
                     <li class="dropdown pull-right">
-                        <a href="#">
+                        <a href="/admin-logout">
                             <svg class="glyph stroked cancel">
                                 <use xlink:href="#stroked-cancel"></use>
                             </svg> Logout</a>

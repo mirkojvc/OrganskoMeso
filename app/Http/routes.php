@@ -101,6 +101,13 @@ $app->get(
 	]
 );
 
+$app->get(
+	'admin-logout',
+	[
+		'uses'	=>	'AdminController@logOut'
+	]
+);
+
 $app->post(
 	'adminLogIn',
 	[

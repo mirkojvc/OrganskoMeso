@@ -27,6 +27,17 @@ class AdminService
         }
     }
 
+    public static function logOut() {
+        try {
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
+
+            unset($_SESSION['current_admin']);
+            return true;
+        } catch (\Exception $e) {
+            return $e->getCode();
+        }
+    }
+
     public static function getCurrentAdmin() {
         if (isset($_SESSION['current_admin'])) return true;
         else return false;
@@ -34,7 +45,7 @@ class AdminService
 
     public static function getRecepies() {
         try {
-            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             return Recepie::orderBy('date', 'DESC')->get();
         } catch (\Exception $e) {
@@ -44,7 +55,7 @@ class AdminService
 
     public static function newRecepie($heading, $ingredients, $how_to_make, $picture) {
         try {
-            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             $heading = ValidationService::validateString($heading, 63);
             if ($heading === false) throw new \Exception("Naslov recepta nije odgovarajućeg formata", 22);
@@ -71,7 +82,7 @@ class AdminService
 
     public static function recepieStatus($id) {
         try {
-            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             $recepie = Recepie::find($id);
             if (empty($recepie)) throw new \Exception("Nepostojeći recept", 3);
@@ -88,7 +99,7 @@ class AdminService
 
     public static function getOrders() {
         try {
-            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             return Order::orderBy('date', 'DESC')->get();
         } catch (\Exception $e) {
@@ -98,7 +109,7 @@ class AdminService
 
     public static function orderStatus($id) {
         try {
-            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+            if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
             $order = Order::find($id);
             if (empty($order)) throw new \Exception("Narudžbina nije pronađena", 28);

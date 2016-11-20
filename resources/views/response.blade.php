@@ -122,10 +122,45 @@
 
 		</div>
 		<div class="col-md-3"></div>
+	@elseif ($code === 17)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Administrator sa tim korisničkim imenom nije pronađen</h1>
+
+		</div>
+		<div class="col-md-3"></div>
 	@elseif ($code === 18)
 		<div class="col-md-3"></div>
 		<div class="col-md-6 messagefail">
 				<h1>Pogrešno ste ukucali lozinku</h1>
+
+		</div>
+		<div class="col-md-3"></div>
+	@elseif ($code === 19)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Niste prijavljeni</h1>
+
+		</div>
+		<div class="col-md-3"></div>
+	@elseif ($code === 22)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Naslov recepta nije odgovarajućeg formata</h1>
+
+		</div>
+		<div class="col-md-3"></div>
+	@elseif ($code === 23)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Sastojci nisu odgovarajućeg formata</h1>
+
+		</div>
+		<div class="col-md-3"></div>
+	@elseif ($code === 24)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Način spremanja nije odgovarajućeg formata</h1>
 
 		</div>
 		<div class="col-md-3"></div>
