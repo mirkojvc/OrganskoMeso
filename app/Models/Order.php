@@ -27,19 +27,21 @@ class Order extends Model
         'street',
         'post_code',
         'spec_req',
+        'delivered',
     ];
 
     protected $cast = [
-        'package'   =>  'string',
-        'quantity'  =>  'integer',
-        'f_name'    =>  'string',
-        's_name'    =>  'string',
-        'email'     =>  'string',
-        'phone'     =>  'string',
-        'place'     =>  'string',
-        'street'    =>  'string',
-        'post_code' =>  'integer',
-        'spec_req'  =>  'string',
+        'package'       =>  'string',
+        'quantity'      =>  'integer',
+        'f_name'        =>  'string',
+        's_name'        =>  'string',
+        'email'         =>  'string',
+        'phone'         =>  'string',
+        'place'         =>  'string',
+        'street'        =>  'string',
+        'post_code'     =>  'integer',
+        'spec_req'      =>  'string',
+        'delivered'     =>  'boolean',
     ];
 
     /**

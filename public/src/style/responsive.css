@@ -72,7 +72,7 @@ nav li a:hover{
    text-decoration: underline!important;
 }
 .fixer{
-    background:url(../img/4.jpg) no-repeat 50% 50% fixed;
+    background:url(../img/4.jpg) no-repeat 50% 50%;
     display: table;
     width: 105%;
     background-size: cover;
@@ -93,7 +93,7 @@ nav li a:hover{
     min-height: 450px;
 }
 .farms-fix{
-    background:url(../img/farms.jpg) no-repeat 50% 50% fixed;
+    background:url(../img/farms.jpg) no-repeat 50% 25%;
     display: table;
     width: 105%;
     background-size: cover;

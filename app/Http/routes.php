@@ -91,6 +91,7 @@ $app->get(
 		'uses'	=>	"HomeController@getRecepie",
 	]
 );
+
 //Admin rute
 $app->get(
 	'admin',
@@ -140,5 +141,19 @@ $app->get(
 	'recepie-status/{id}',
 	[
 		'uses'	=>	'AdminController@postRecepieStatus',
+	]
+);
+
+$app->get(
+	'admin-orders',
+	[
+		'uses'	=>	'AdminController@getOrders',
+	]
+);
+
+$app->get(
+	'order-status/{id}',
+	[
+		'uses'	=>	'AdminController@postOrderStatus',
 	]
 );

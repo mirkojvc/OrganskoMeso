@@ -99,12 +99,6 @@
 		</div>
 		<div class="col-md-3">
       <article class="art-rght">
-        <p>Dostavu narudzbina izvršavamo jednom mesečno.</p>
-        <p>Sledeci rok za dostavu je</p>
-        <p><strong>01/01/2000<strong></p>
-          <a href="{{route('order')}}" class="button-order2">Narucite odmah</a>
-      </article>
-      <article class="art-rght">
         <h3>DA SUMIRAMO ONO ŠTO JE BITNO ZA NAŠU BUŠU :</h3>
           <ul>
                 <li>GOVEČE UZGAJANO U USLOVIMA NETAKNUTE PRIRODE PO PRAVILIMA ORGANSKE PROIZVODNJE</li>

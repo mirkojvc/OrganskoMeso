@@ -19,7 +19,6 @@ class AdminController extends Controller
         $username = $request->input('username');
         $password = $request->input('password');
         $response = AdminService::logIn($username, $password);
-        var_dump($response);
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return redirect('adminPanel');
     }
@@ -55,5 +54,17 @@ class AdminController extends Controller
         $response = AdminService::recepieStatus($id);
         if (is_numeric($response)) return View('response', ['code' => $response]);
         else return redirect('approveRecepie');
+    }
+
+    public static function getOrders() {
+        $response = AdminService::getOrders();
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return View('admin_orders', ['orders' => $response]);
+    }
+
+    public static function postOrderStatus($id) {
+        $response = AdminService::orderStatus($id);
+        if (is_numeric($response)) return View('response', ['code' => $response]);
+        else return redirect('admin-orders');
     }
 }

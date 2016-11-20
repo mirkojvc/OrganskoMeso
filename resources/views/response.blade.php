@@ -122,6 +122,13 @@
 
 		</div>
 		<div class="col-md-3"></div>
+	@elseif ($code === 18)
+		<div class="col-md-3"></div>
+		<div class="col-md-6 messagefail">
+				<h1>Pogrešno ste ukucali lozinku</h1>
+
+		</div>
+		<div class="col-md-3"></div>
 	@elseif ($code === 25)
 		<div class="col-md-3"></div>
 		<div class="col-md-6 messagesuc">

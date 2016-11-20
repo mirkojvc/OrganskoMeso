@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Providers\ValidationService;
 use App\Models\Admin;
 use App\Models\Recepie;
-//use App\Models\Order;
+use App\Models\Order;
 
 class AdminService
 {
@@ -79,7 +79,35 @@ class AdminService
             $recepie->approved = boolval($recepie->approved) === false ? true : false;
 
             $recepie->save();
+
             return $recepie->approved;
+        } catch (\Exception $e) {
+            return $e->getCode();
+        }
+    }
+
+    public static function getOrders() {
+        try {
+            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+
+            return Order::orderBy('date', 'DESC')->get();
+        } catch (\Exception $e) {
+            return $e->getCode();
+        }
+    }
+
+    public static function orderStatus($id) {
+        try {
+            if (self::getCurrentAdmin() === false) throw new Exception("Nemate dozvolu za trenutnu operaciju", 27);
+
+            $order = Order::find($id);
+            if (empty($order)) throw new \Exception("Narudžbina nije pronađena", 28);
+
+            $order->delivered = boolval($order->delivered) === false ? true : false;
+
+            $order->save();
+
+            return $order->delivered;
         } catch (\Exception $e) {
             return $e->getCode();
         }

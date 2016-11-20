@@ -58,7 +58,7 @@
                         </svg> Recepti</a>
                 </li>
                 <li>
-                    <a href="/newRecepie">
+                    <a href="/admin-orders">
                         <svg class="glyph stroked line-graph">
                             <use xlink:href="#stroked-line-graph"></use>
                         </svg> Narudzbine</a>
