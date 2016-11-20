@@ -72,7 +72,7 @@ nav li a:hover{
    text-decoration: underline!important;
 }
 .fixer{
-    background:url(../img/4.jpg) no-repeat 50% 50%;
+    background:url(../img/4.jpg) no-repeat 50% 50% fixed;
     display: table;
     width: 105%;
     background-size: cover;
