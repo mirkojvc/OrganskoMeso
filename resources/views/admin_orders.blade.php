@@ -16,13 +16,22 @@
 			    	<th>Poštanski kod</th>
 			    	<th>Specijalni zahtevi</th>
 			    	<th>Datum poručivanja</th>
+			    	<th>Vreme poručivanja</th>
 			    	<th>Status dostave</th>
 			    </tr>
 		    </thead>
 		    <tbody>
 	    	@if (!empty($orders)) @foreach ($orders as $order)
 	    		<tr>
-	    			<td>{{ $order->package }}</td>
+	    			@if ($order->package === 'one')
+	    				<td>Cela krava</td>
+	    			@elseif ($order->package === 'half')
+	    				<td>Polovina krave</td>
+	    			@elseif ($order->package === 'quater')
+	    				<td>Četvrtina krave</td>
+	    			@else
+	    				<td>Osmina krave</td>
+	    			@endif
 	    			<td>{{ $order->quantity }}</td>
 	    			<td>{{ $order->f_name }}</td>
 	    			<td>{{ $order->s_name }}</td>
@@ -31,8 +40,13 @@
 	    			<td>{{ $order->place }}</td>
 	    			<td>{{ $order->street }}</td>
 	    			<td>{{ $order->post_code }}</td>
-	    			<td>{{ $order->spec_req }}</td>
+	    			@if (empty($order->spec_req))
+	    				<td class="btn-success">Nema posebne zahteve</td>
+	    			@else
+	    				<td class="btn-danger">{{ $order->spec_req }}</td>
+	    			@endif
 	    			<td>{{ $order->date }}</td>
+	    			<td>{{ $order->time }}</td>
 		    		<td>
 		    			@if ($order->delivered === 1)
 		    				<a class="btn btn-success" href="order-status/{{ $order->id }}">Poslato</a>
@@ -44,7 +58,7 @@
 	    	@endforeach @endif
 	    	</tbody>
 	    </table>
-		</div>
+	</div>
 
 
 @endsection

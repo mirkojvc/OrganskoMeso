@@ -1,6 +1,6 @@
 @include('includes.header')
 @extends('layouts.master')
- 
+
 
 @section('content')
 <div class="row fixer">
@@ -10,14 +10,14 @@
 	</div>
 <div class="row cont-hold">
 	<div class="col-md-12 par-contact">
-	<p>Ukoliko imate bilo kakvo pitanje kontaktirajte nas na bilo koji nacin</p>
+	<p>Ukoliko imate bilo kakvo pitanje kontaktirajte nas na bilo koji način</p>
 	<p>EMAIL:nekimail@gmail.com</p>
 	<p>Mobilni telefon:+381 60 000 0000</p>
 	<p>Fiksni: 011 211 1111</p>
 	</div>
 </div>
 <div class="row cont-hold">
-	<h3>Posaljite nam poruku direktno</h3>
+	<h3>Pošaljite nam poruku direktno</h3>
 	<form action="/emailContact" method="post">
 	<input type="text" name="first_name" placeholder="Ime">
 	<input type="text" name="last_name" placeholder="Prezime">

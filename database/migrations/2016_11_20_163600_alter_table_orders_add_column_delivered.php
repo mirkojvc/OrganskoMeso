@@ -15,7 +15,8 @@ class AlterTableOrdersAddColumnDelivered extends Migration
         Schema::table('Orders', function($table)
         {
             $table->boolean('delivered')->default(false);
-            $table->dateTime('date')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->date('date');
+            $table->time('time');
         });
     }
 

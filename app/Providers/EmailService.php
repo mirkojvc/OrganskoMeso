@@ -85,6 +85,10 @@ class EmailService
 
     		$order->spec_req = $spec_req;
 
+            $order->date = date("Y-m-d");
+
+            $order->time = date("H:i:s");
+
     		$order->save();
 
     		//slanje mejla
@@ -93,15 +97,15 @@ class EmailService
 
     		$to = $adminMail;
 		    $subject = "Narudzbina";
-		    $subject2 = "Kopija narudzbine";
+		    $subject2 = "Kopija narudžbine";
 		    $message = $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
-		    $message2 = "Kopija narudzbine koju ste porucili ". $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
+		    $message2 = "Kopija narudžbine koju ste porucili ". $f_name . " " . $s_name . "Je narucio:" . "\n\n". $quantity . "kutija od po" . $package . "krave" . "\n\n" . "Licne informacije su:". $email . $phone . $place . $street . $post_code . $spec_req;
 		    $headers = "From:" . $email;
 		    $headers2 = "From:" . $to;
-		    $mail1 = mail($to,$subject,$message,$headers);
-		    $mail2 = mail($email,$subject2,$message2,$headers2);
+		    //$mail1 = mail($to,$subject,$message,$headers);
+		    //$mail2 = mail($email,$subject2,$message2,$headers2);
 
-    		if ($mail1 === false) throw new \Exception("Neuspešno poslata narudžbina", 26);
+    		//if ($mail1 === false) throw new \Exception("Neuspešno poslata narudžbina", 26);
             return true;
     	} catch (\Exception $e) {
     		return $e->getCode();

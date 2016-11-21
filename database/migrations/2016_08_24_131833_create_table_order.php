@@ -24,7 +24,7 @@ class CreateTableOrder extends Migration
             $table->string('place', 127);
             $table->string('street', 127);
             $table->smallInteger('post_code');
-            $table->text('spec_req');
+            $table->text('spec_req')->nullable();
         });
     }
 

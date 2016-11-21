@@ -28,6 +28,8 @@ class Order extends Model
         'post_code',
         'spec_req',
         'delivered',
+        'date',
+        'time'
     ];
 
     protected $cast = [
@@ -42,6 +44,8 @@ class Order extends Model
         'post_code'     =>  'integer',
         'spec_req'      =>  'string',
         'delivered'     =>  'boolean',
+        'date'          =>  'date',
+        'time'          =>  'time'
     ];
 
     /**

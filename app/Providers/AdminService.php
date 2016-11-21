@@ -101,7 +101,9 @@ class AdminService
         try {
             if (self::getCurrentAdmin() === false) throw new \Exception("Nemate dozvolu za trenutnu operaciju", 27);
 
-            return Order::orderBy('date', 'DESC')->get();
+            return Order::orderBy('date', 'DESC')
+            ->orderBy('time', 'ASC')
+            ->get();
         } catch (\Exception $e) {
             return $e->getCode();
         }

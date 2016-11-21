@@ -67,7 +67,7 @@
   <div  class="row btn-ord">
     <div id="slide-down" class="col-md-4"></div>
 		<div id="slide-down" class="col-md-4">
-        <a href="{{route('order')}}" class="button-order">Narucite odmah</a>
+        <a href="{{route('order')}}" class="button-order">Naručite odmah</a>
     </div>
      <div id="slide-down" class="col-md-4"></div>
         	</div>
@@ -114,7 +114,7 @@
 	</div>
 	<div class="row fixer">
     <div class="footer-header">
-		  <h2>Prodaja mesa sa organske farme Busa</h2>
+		  <h2>Prodaja mesa sa organske farme Buša</h2>
 
       </div>
 	</div>

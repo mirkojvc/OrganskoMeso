@@ -4,7 +4,7 @@
 @section('content')
 		<div class="row  farms-fix">
     <div class="footer-header">
-		  <h2>Nase farme</h2>
+		  <h2>Naše farme</h2>
       </div>
 	</div>
 @endsection
